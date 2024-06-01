@@ -1,0 +1,5 @@
+flet
+flet-easy
+uvicorn[standard]
+firebase_admin
+pyrebase4
