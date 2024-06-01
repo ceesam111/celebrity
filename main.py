@@ -257,11 +257,11 @@ class App(UserControl):
       self.screen_views 
     )
 
-# run = app(target=App,assets_dir='/assets', view=WEB_BROWSER,export_asgi_app=True)
+run = app(target=App,assets_dir='/assets', view=WEB_BROWSER,export_asgi_app=True)
 
 #app(target=App,assets_dir='assets')#,export_asgi_app=True,)
 
-run = app(target=App,assets_dir='assets',export_asgi_app=True,)
+#run = app(target=App,assets_dir='assets',export_asgi_app=True,)
 
 # class HelloHandler(BaseHTTPRequestHandler):
 #   def do_GET(self):
