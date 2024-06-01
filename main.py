@@ -202,15 +202,15 @@ class App(UserControl):
         
       
     elif e.control.data == 'main_page':
-      print("get to main")
+      # print("get to main")
       self.screen_views.controls.clear()
       self.screen_views.controls.append(self.main_page)
       self.screen_views.update()
       self.pg.update()
-      print("after main")
+      # print("after main")
       
     elif e.control.data == 'light':
-      print('yeah!')
+      # print('yeah!')
       self.screen_views.controls.clear()
       self.screen_views.controls.append(Index2(self.switch_page,self.pg))
       self.screen_views.update()
@@ -219,10 +219,10 @@ class App(UserControl):
       password = self.login_page.pwd_input.content.value
       email = self.login_page.email
       
-      print(password,email)
+      # print(password,email)
 
       auth = authenticate(email,password)
-      print(str(auth))
+      # print(str(auth))
       if auth:
         asyncio.run(save_token(auth))
         self.screen_views.controls.clear()
@@ -257,11 +257,11 @@ class App(UserControl):
       self.screen_views 
     )
 
-run = app(target=App,assets_dir='/assets', view=WEB_BROWSER,export_asgi_app=True)
+# run = app(target=App,assets_dir='/assets', view=WEB_BROWSER,export_asgi_app=True)
 
 #app(target=App,assets_dir='assets')#,export_asgi_app=True,)
 
-#run = app(target=App,assets_dir='assets',export_asgi_app=True,)
+run = app(target=App,assets_dir='assets',export_asgi_app=True,)
 
 # class HelloHandler(BaseHTTPRequestHandler):
 #   def do_GET(self):
